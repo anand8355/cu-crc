@@ -61,6 +61,7 @@ $this->load->library('form_validation');
 		$backlog  	= $this->input->post('backlog');
 		$mode  	= $this->input->post('mode');
 		$gen  	= $this->input->post('gen');
+		$val  	= $this->input->post('val');
 		$data=[
 			
 			'name' 	=> $name,
@@ -88,6 +89,7 @@ $this->load->library('form_validation');
 			'backlog'   => $backlog,
 			'mode'   => $mode,
 			'gen'   => $gen,
+			'val'   => $val,
 			'drive_status' =>1
 		];
 		
