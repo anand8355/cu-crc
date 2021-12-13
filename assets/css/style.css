@@ -1,0 +1,109 @@
+
+
+
+a, a:hover{
+    color: inherit;
+    text-decoration: none;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+}
+.root
+{
+    padding: 1em 0em;
+    margin: 0em auto;
+    height: 90vh;
+    position: absolute;
+    align-items: center;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 768px)
+ {
+    /* For mobile phones: */
+    .sec1 {
+      order: 2;
+      bottom: 0;
+    }
+   #rm1{
+	   
+	   margin-top:-500px;
+   }
+   #rm2{
+	   
+	   margin-top:-500px;
+   }
+   hr.new1 {
+  border-top: 1px solid red;
+}
+
+  }
+.btn
+{
+    background: #FFA11B;
+    color: white;
+    padding: 0.5em 1.3em;
+    border-radius: 2em;
+    margin-top: 1rem;
+}
+
+.form-group
+{
+    margin: 1rem auto;
+    width: 300px;
+}
+.form-control
+{
+    box-shadow: 0px 3px 6px #00000029;
+    border: none;
+}
+.form-control:focus
+{
+    border-left: 5px solid #FFA11B;
+    padding: 1.375rem 0.75rem;
+}
+.head
+{
+  margin: 0;
+  background-color: #192B4D;
+  color: white;
+  padding: 0.5em 0em;
+  text-align: center;
+  box-shadow: 0px 10px 15px #00000029;
+  align-items: center;
+}
+.foot
+{
+    background-color: #5a5a5a;
+    color: white;
+    text-align: center;
+}
+#f-text
+{
+    margin-bottom: 0.3rem;
+}
+.imageicon
+{
+    text-align: center;
+}
+.imageicon img
+{
+    height: 17vh;
+    padding: 0;
+}
+.vector
+{
+    margin: 0 auto;
+}
+.vector img
+{
+    width: inherit;
+}
+.form-holder
+{
+    text-align: center;
+}
+

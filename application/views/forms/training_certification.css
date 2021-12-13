@@ -1,0 +1,36 @@
+.heading{
+    border-radius: 2%;
+    height: 50%;
+    padding-left: 20px;
+    margin-top: 20px;
+    border: solid rgb(226, 226, 226) 1px;
+    background-color: rgb(226, 226, 226);
+}
+.form{
+    margin: 50px;
+}
+.btn-block{
+    margin-top: 40px;
+}
+.form-control{
+    margin: 40px;
+}
+.bun{
+    float: right;
+    margin-top: 20px;
+}
+#clickMe{
+    margin: 20px;
+}
+
+/* <!-- // Team Mentor->Mr. Anand kumar 
+// Team Name->Harroxx
+// Team Members->
+// 1-Harsh Tyagi (CSE)
+// 2-Kanak goel
+// 3-Vaibhav
+// 4-Ruchi
+// 5-Shreya
+
+// Technology Used->
+// Bootstrap 4,Html ,CSS ,CodeIgniter,Javascript  --> */
