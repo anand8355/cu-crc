@@ -24,8 +24,8 @@
     <input type="text" class="form-control" id="type" name="type" required>
   </div>
   <div class="form-group col-md-4">
-    <label for="exampleInputPassword1">Date of Campus Drive*</label>
-    <input type="date" class="form-control" id="drive_date" name="drive_date" required>
+    <label for="exampleInputPassword1">Date of Campus Drive</label>
+    <input type="date" class="form-control" id="drive_date" name="drive_date" >
   </div>
    <div class="form-group col-md-4">
     <label for="exampleInputPassword1">Batch* (i.e 2021)</label>
@@ -35,8 +35,8 @@
   
   <div class="form-row">
   <div class="form-group col-md-6">
-    <label for="exampleInputPassword1">Total Days for dirve*</label>
-    <input type="text" class="form-control" id="total_date" name="total_date" required>
+    <label for="exampleInputPassword1">Total Days for dirve</label>
+    <input type="text" class="form-control" id="total_date" name="total_date" >
   </div>
   <div class="form-group col-md-6">
     <label for="exampleInputPassword1">Job Location*</label>
@@ -59,10 +59,55 @@
     <label for="exampleInputPassword1">Stream Required*</label>
     <input type="text" class="form-control" id="stream" name="stream" required>
   </div>
-  
+
   <div class="form-group">
-    <label for="exampleInputPassword1">Eligibility Criteria*</label>
-    <input type="text" class="form-control" id="cri" name="cri" required>
+    <label for="exampleInputPassword1">Eligibility Criteria* (<i> Please mention percentage, if not applicable fill 0</i>)</label>
+    
+  </div>
+  
+  <div class="form-row">
+  <div class="form-group col-md-1">
+    <label for="exampleInputPassword1">10<sup>th</sup>*</label>
+    <input type="number" class="form-control" id="tenage" name="tenage" required>
+  </div>
+  <div class="form-group col-md-1">
+    <label for="exampleInputPassword1">12<sup>th</sup>*</label>
+    <input type="number" class="form-control" id="twage" name="twage" required>
+  </div>
+  <div class="form-group col-md-1">
+    <label for="exampleInputPassword1">Dip*</label>
+    <input type="number" class="form-control" id="dipage" name="dipage" required>
+  </div>
+  <div class="form-group col-md-1">
+    <label for="exampleInputPassword1">UG*</label>
+    <input type="number" class="form-control" id="ugage" name="ugage" required>
+  </div>
+  <div class="form-group col-md-1">
+    <label for="exampleInputPassword1">PG*</label>
+    <input type="number" class="form-control" id="pgage" name="pgage" required>
+  </div>
+  <div class="form-group col-md-2">
+    <label for="exampleInputPassword1">Backlog*</label>
+    <input type="number" class="form-control" id="backlog" name="backlog" required>
+  </div>
+  <div class="form-group col-md-2">
+    <label for="exampleInputPassword1">Status*</label>
+   <select id="mode" name="mode" class="form-control" required>
+   <option value=""></option>
+   <option value="placed">placed</option>
+   <option value="unplaced">Unplaced</option>
+   <option value="b">Both</option>
+   </select>
+  </div>
+  <div class="form-group col-md-2">
+  <label for="exampleInputPassword1">Gender*</label>
+   <select id="gen" name="gen" class="form-control" required>
+   <option value=""></option>
+   <option value="m">Male</option>
+   <option value="f">Female</option>
+   <option value="b">Both</option>
+   </select>
+  </div>
   </div>
   
  
@@ -87,8 +132,8 @@
   
   <div class="form-row">
   <div class="form-group col-md-4">
-    <label for="exampleInputPassword1">Date of Joining*</label>
-    <input type="date" class="form-control" id="join1" name="join1" required>
+    <label for="exampleInputPassword1">Date of Joining</label>
+    <input type="date" class="form-control" id="join1" name="join1" >
   </div>
   <div class="form-group col-md-4">
     <label for="exampleInputPassword1">Any Bond or Fee* (YES/NO)</label>
@@ -100,9 +145,15 @@
   </div>
   </div>
   
-  <div class="form-group">
+  <div class="form-row">
+  <div class="form-group col-md-9">
     <label for="exampleInputPassword1">Pay package*</label>
     <input type="text" class="form-control" id="pack" name="pack" required>
+  </div>
+  <div class="form-group col-md-3">
+    <label for="exampleInputPassword1">Pay Value*</label>
+    <input type="text" class="form-control" id="val" name="val" required>
+  </div>
   </div>
   
   

@@ -29,7 +29,12 @@ $this->load->library('form_validation');
 	
 	public function add_drive()
 	{
-		
+		$tenage  	= 0;
+		$twage  	= 0;
+		$dipage  	= 0;
+		$ugage  	= 0;
+		$pgage  	= 0;
+		$backlog  	= 0;
 			
 		$name  		= $this->input->post('name');
 		$type  	= $this->input->post('type');
@@ -48,6 +53,14 @@ $this->load->library('form_validation');
 		$jprofile  	= $this->input->post('jprofile');
 		$pack  	= $this->input->post('pack');
 		$placement  	= $this->input->post('placement');
+		$tenage  	= $this->input->post('tenage');
+		$twage  	= $this->input->post('twage');
+		$dipage  	= $this->input->post('dipage');
+		$ugage  	= $this->input->post('ugage');
+		$pgage  	= $this->input->post('pgage');
+		$backlog  	= $this->input->post('backlog');
+		$mode  	= $this->input->post('mode');
+		$gen  	= $this->input->post('gen');
 		$data=[
 			
 			'name' 	=> $name,
@@ -66,7 +79,15 @@ $this->load->library('form_validation');
 			'bond'   => $bond,
 			'jprofile'   => $jprofile,
 			'pack'   => $pack,
-			'placement'   => $placement,			
+			'placement'   => $placement,
+			'tenage'   => $tenage,
+			'twage'   => $twage,
+			'dipage'   => $dipage,			
+			'ugage'   => $ugage,
+			'pgage'   => $pgage,
+			'backlog'   => $backlog,
+			'mode'   => $mode,
+			'gen'   => $gen,
 			'drive_status' =>1
 		];
 		
