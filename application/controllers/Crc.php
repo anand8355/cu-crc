@@ -17,7 +17,7 @@ $this->load->helper('url');
 $this->load->helper('form');
 $this->load->library('session');
 $this->load->library('form_validation');
-
+$this->load->dbforge();
 
 }
 	public function index()
@@ -67,13 +67,17 @@ $this->load->library('form_validation');
 			'jprofile'   => $jprofile,
 			'pack'   => $pack,
 			'placement'   => $placement,			
-			'drive_status' =>1
+			'drive_status' =>0
 		];
 		
 		
 			$rs = $this->mymodelcrc->add_drive($data);
+			$col = "drive_".$rs;
 			if($rs)
 			{
+				
+				$this->mycrc->add_col($col);
+
 			$this->session->set_flashdata('success','Drive Posted Successfully');
 			     	
 			return redirect('dash/home_crc');
@@ -177,5 +181,12 @@ $this->load->library('form_validation');
 	 $this->load->view('eligible-student');	
 	 }
 	
+	 public function addcol()
+	 {
+		$r= $this->mycrc->add_col();
+		echo $r;		
+	  }
+
+
 }
 

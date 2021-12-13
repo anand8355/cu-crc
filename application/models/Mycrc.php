@@ -50,7 +50,18 @@ class Mycrc extends CI_Model
 	   return $rs;
 	}
 	
+	public function add_col($col)
+	{
+		$fields = array(
+			$col => array('type' => 'TEXT')
+	);
+	$r= 	$this->dbforge->add_column('driveinfo', $fields);
 	
+	return $r;
+	}
+
+
+
 }
 
 
