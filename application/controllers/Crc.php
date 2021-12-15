@@ -80,7 +80,6 @@ $this->load->dbforge();
 			'bond'   => $bond,
 			'jprofile'   => $jprofile,
 			'pack'   => $pack,
-<<<<<<< HEAD
 			'placement'   => $placement,
 			'tenage'   => $tenage,
 			'twage'   => $twage,
@@ -92,10 +91,6 @@ $this->load->dbforge();
 			'gen'   => $gen,
 			'val'   => $val,
 			'drive_status' =>1
-=======
-			'placement'   => $placement,			
-			'drive_status' =>0
->>>>>>> aks
 		];
 		
 		
