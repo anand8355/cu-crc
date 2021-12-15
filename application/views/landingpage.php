@@ -83,7 +83,7 @@ session_start();
 		
 		<div class="row">
 		<footer class="col-md-12 foot fixed-bottom">
-      <p id="f-text">© Copyright 2021, Chandigarh University </p>
+      <p id="f-text">© Copyright 2021, Amity University </p>
   </footer>
 		</div>	 
 	 </div>
