@@ -205,11 +205,7 @@ $this->load->dbforge();
 	 $this->load->view('eligible-student');	
 	 }
 	
-	 public function addcol()
-	 {
-		$r= $this->mycrc->add_col();
-		echo $r;		
-	  }
+	 
 
 
 }
