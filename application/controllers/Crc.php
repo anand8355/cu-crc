@@ -72,15 +72,16 @@ $this->load->dbforge();
 		
 		
 			$rs = $this->mymodelcrc->add_drive($data);
-			$col = "drive_".$rs;
+			$dr_id = "drive_".$rs;
 			if($rs)
 			{
 				
-				$this->mycrc->add_col($col);
-
-			$this->session->set_flashdata('success','Drive Posted Successfully');
-			     	
+			$r=	$this->mycrc->add_col($dr_id);
+            if($r)
+			{
+			$this->session->set_flashdata('success','Drive Posted Successfully');			     	
 			return redirect('dash/home_crc');
+			}
 			}
 			else
 			{
