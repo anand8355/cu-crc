@@ -45,7 +45,7 @@ $this->load->dbforge();
 		$profile  	= $this->input->post('profile');
 		$web  	= $this->input->post('web');
 		$stream  			= $this->input->post('stream');
-		$cri 	= $this->input->post('cri');
+		
 		$pos  	= $this->input->post('pos');		
 		$skill  	= $this->input->post('skill');		
 		$join1  	= $this->input->post('join1');
@@ -73,7 +73,7 @@ $this->load->dbforge();
 			'profile' => $profile,
 			'web'   => $web,
 			'stream' 		  => $stream,
-			'cri' => $cri,
+		
 			'pos'   => $pos,
 			'skill'   => $skill,
 			'join1'   => $join1,
