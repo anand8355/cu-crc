@@ -17,7 +17,7 @@ $this->load->helper('url');
 $this->load->helper('form');
 $this->load->library('session');
 $this->load->library('form_validation');
-
+$this->load->dbforge();
 
 }
 	public function index()
@@ -80,6 +80,7 @@ $this->load->library('form_validation');
 			'bond'   => $bond,
 			'jprofile'   => $jprofile,
 			'pack'   => $pack,
+<<<<<<< HEAD
 			'placement'   => $placement,
 			'tenage'   => $tenage,
 			'twage'   => $twage,
@@ -91,15 +92,24 @@ $this->load->library('form_validation');
 			'gen'   => $gen,
 			'val'   => $val,
 			'drive_status' =>1
+=======
+			'placement'   => $placement,			
+			'drive_status' =>0
+>>>>>>> aks
 		];
 		
 		
 			$rs = $this->mymodelcrc->add_drive($data);
+			$dr_id = "drive_".$rs;
 			if($rs)
 			{
-			$this->session->set_flashdata('success','Drive Posted Successfully');
-			     	
+				
+			$r=	$this->mycrc->add_col($dr_id);
+            if($r)
+			{
+			$this->session->set_flashdata('success','Drive Posted Successfully');			     	
 			return redirect('dash/home_crc');
+			}
 			}
 			else
 			{
@@ -200,5 +210,12 @@ $this->load->library('form_validation');
 	 $this->load->view('eligible-student');	
 	 }
 	
+	 public function addcol()
+	 {
+		$r= $this->mycrc->add_col();
+		echo $r;		
+	  }
+
+
 }
 

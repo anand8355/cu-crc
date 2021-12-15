@@ -137,8 +137,10 @@ class Mymodelcrc extends CI_Model
 	
 	public function add_drive($data)
 	{		
-	    $rs= $this->db->insert('drive_details', $data);
-	   return $rs;
+		$rs= $this->db->insert('drive_details', $data);
+		$insertId = $this->db->insert_id();
+		return $insertId;
+	   //return $rs;
 	}
 	
 	public function get_drive()
