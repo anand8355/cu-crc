@@ -22,8 +22,8 @@ $this->load->dbforge();
 }
 	public function index()
 	{
-		
-			$this->load->view('newdrive');
+		$data['stream']=$this->mycrc->get_stream();
+			$this->load->view('newdrive',$data);
 		
 	}
 	
@@ -35,7 +35,14 @@ $this->load->dbforge();
 		$ugage  	= 0;
 		$pgage  	= 0;
 		$backlog  	= 0;
-			
+		
+        $st_req = array();
+        for($i=0; $i<16;$i=$i+1)
+		{
+			$st_req[i]= 'NULL';
+		}
+		$st_req  		= $this->input->post('stream_req');
+        
 		$name  		= $this->input->post('name');
 		$type  	= $this->input->post('type');
 		$drive_date  		= $this->input->post('drive_date');
@@ -43,9 +50,7 @@ $this->load->dbforge();
 		$total_date  = $this->input->post('total_date');
 		$loc  			= $this->input->post('loc');
 		$profile  	= $this->input->post('profile');
-		$web  	= $this->input->post('web');
-		$stream  			= $this->input->post('stream');
-		
+		$web  	= $this->input->post('web');		
 		$pos  	= $this->input->post('pos');		
 		$skill  	= $this->input->post('skill');		
 		$join1  	= $this->input->post('join1');
@@ -71,9 +76,7 @@ $this->load->dbforge();
 			'total_date'	  => $total_date,
 			'loc' 	      => $loc,
 			'profile' => $profile,
-			'web'   => $web,
-			'stream' 		  => $stream,
-		
+			'web'   => $web,		
 			'pos'   => $pos,
 			'skill'   => $skill,
 			'join1'   => $join1,
@@ -90,6 +93,22 @@ $this->load->dbforge();
 			'mode'   => $mode,
 			'gen'   => $gen,
 			'val'   => $val,
+			'st_req0'   => $st_req[0],
+			'st_req1'   => $st_req[1],
+			'st_req2'   => $st_req[2],
+			'st_req3'   => $st_req[3],
+			'st_req4'   => $st_req[4],
+			'st_req5'   => $st_req[5],
+			'st_req6'   => $st_req[6],
+			'st_req7'   => $st_req[7],
+			'st_req8'   => $st_req[8],
+			'st_req9'   => $st_req[9],
+			'st_req10'   => $st_req[10],
+			'st_req11'   => $st_req[11],
+			'st_req12'   => $st_req[12],
+			'st_req13'   => $st_req[13],
+			'st_req14'   => $st_req[14],
+			'st_req15'   => $st_req[15],
 			'drive_status' =>1
 		];
 		

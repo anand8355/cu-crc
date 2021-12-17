@@ -57,8 +57,24 @@
   
   <div class="form-group">
     <label for="exampleInputPassword1">Stream Required*</label>
-    <input type="text" class="form-control" id="stream" name="stream" required>
+    
   </div>
+  <?php
+$r2 = $stream->num_rows();
+$rw2= $stream->result_array();
+$k=0;
+
+?>
+  <div class="form-row">
+  <?php while($k<$r2){ ?>
+  <div class="form-group col-md-4">
+   <input type="checkbox" id="tenage" name="stream_req[]" value="<?php  echo $rw2[$k]['stream_name'];?>"> <label for="exampleInputPassword1"><?php  echo $rw2[$k]['stream_name'];?></label>
+</div>
+<?php $k= $k+1; }?>
+<div class="form-group col-md-1">
+   <input type="checkbox" id="tenage" name="tenage">
+</div>
+</div>
 
   <div class="form-group">
     <label for="exampleInputPassword1">Eligibility Criteria* (<i> Please mention percentage, if not applicable fill 0</i>)</label>
