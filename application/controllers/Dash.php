@@ -31,7 +31,7 @@ $this->load->library('form_validation');
 	{
 		
 			$data['drive']=$this->mymodelcrc->get_drive();
-				$this->load->view('home', $data);
+			$this->load->view('home', $data);
 		
 	}
 	
@@ -539,7 +539,7 @@ $this->load->library('form_validation');
 	{
 		    session_unset();
 			session_destroy();
-			return redirect('dash/index');
+			return redirect('welcome/index');
 	}
 	  
 	  
@@ -558,6 +558,28 @@ $this->load->library('form_validation');
 		$data['drive']= $this->mymodelcrc->get_details_drive($x);		
 		$this->load->view('student-viewdrive',$data);
 	}
+
+	public function self_register($x,$y)
+	{
+		
+		$rs= $this->mymodelcrc->checkdrive($x,$y);
+        if($rs)
+		{
+			$this->session->set_userdata('session_msg',"Already Registered.....");
+			$data['drive']=$this->mymodelcrc->get_drive();
+				$this->load->view('home', $data);
+		}
+		else
+		{
+			$rs= $this->mymodelcrc->selfregister($x,$y);
+			$data['drive']=$this->mymodelcrc->get_drive();
+			$this->session->set_userdata('session_msg',"Resistration Complete.....");
+				$this->load->view('home', $data);
+		}
+		
+	}
+
+	
 	
 	
 	

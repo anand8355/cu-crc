@@ -200,13 +200,19 @@ $this->load->dbforge();
 	
 	public function viewdrive($x)
 	{
-		$data['drive']= $this->mymodelcrc->get_details_drive($x);		
+		
+		$data['drive']= $this->mymodelcrc->get_details_drive($x); 
+		$data['eligible']= $this->mymodelcrc->get_eligible($x); 
+		$data['register']= $this->mymodelcrc->get_register($x); 
+
 		$this->load->view('viewdrive',$data);
 	}
 	
 	public function get_student_profile($user_id)
 	{
-	  $data['personal']= $this->mycrc->get_studentprofile($user_id);		
+	  $data['personal']= $this->mycrc->get_studentprofile($user_id);
+	  
+	  
 		$this->load->view('student-profile',$data);	
 	}
 	
@@ -221,7 +227,8 @@ $this->load->dbforge();
 	
 	public function get_eligible_student($drive_id)
 	{
-	 $this->load->view('eligible-student');	
+		$data['personal']= $this->mymodelcrc->geteligiblestudent();
+	 $this->load->view('eligible-student', $data);	
 	 }
 	
 	 

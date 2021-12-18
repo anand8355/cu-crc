@@ -12,7 +12,13 @@
 	 <div class="row" style="margin-top:5px;">
 	 
 	<div class="col-md-12">
-
+	<?php 
+	$r = $personal->num_rows();
+	$rw= $personal->result_array();
+	$i=0;
+	
+	
+	?>
 	<table class="table table-striped table-bordered"  id="myTable">
     <thead>
       <tr>
@@ -26,9 +32,13 @@
     </thead>
     <tbody>
 	
-	 </tbody>
+	 
+	 <?php while($i<$r){ ?>
+	<tr><td><?php  echo $i;?></td><td><?php  echo $rw[$i]['user_name'];?></td><td><?php  echo $rw[$i]['user_id'];?></td><td><?php  echo $rw[$i]['college'];?></td><td><?php  echo $rw[$i]['course'];?></td><td><?php  echo $rw[$i]['stream'];?></td></tr>
+	<?php $i= $i+1; }?>
+
+	</tbody>
 	 </table>
-	<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 	</div>
 	
 	

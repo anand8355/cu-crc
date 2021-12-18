@@ -90,11 +90,11 @@
 	</div>
 	<div class="col-md-3">
 	<h5> No of Eligible Students: <br>
-	<a href="<?php  echo base_url();?>crc/get_eligible_student/<?php echo $drive[0]['drive_id'];?>" >0&nbsp; </a>[<a href="#" ><i>Download</i></a>]</h5>
+	<a href="<?php  echo base_url();?>crc/get_eligible_student/<?php echo $drive[0]['drive_id'];?>" ><?php print_r($eligible); ?>&nbsp; </a>[<a href="#" ><i>Download</i></a>]</h5>
 	<br>
 	
 	<h5> No of Students Registered: <br>
-	<a href="#" >0&nbsp; </a>[<a href="#" ><i>Download</i></a>]</h5>
+	<a href="#" ><?php print_r($register); ?>&nbsp; </a>[<a href="#" ><i>Download</i></a>]</h5>
 	<br>
 	
 	<h5> No of Students Not Applied: <br>

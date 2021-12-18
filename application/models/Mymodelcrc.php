@@ -171,8 +171,23 @@ class Mymodelcrc extends CI_Model
 	   return $rs->result_array();
 	}
 	
-	//
-//
+	public function get_eligible($x)
+	{		
+	    $this->db->select('*');		
+		$this->db->where('status',2);		
+		$rs= $this->db->get('personal_details');
+	   $r= $rs->num_rows();
+	   return $r;
+	}
+
+	public function get_register($x)
+	{		
+	    $drive= "drive_".$x;
+		$this->db->select('*');		
+		$rs= $this->db->get($drive);
+	   $r= $rs->num_rows();
+	   return $r;
+	}
 
 	public function trash_drive($x, $data)
 	{
@@ -205,6 +220,38 @@ class Mymodelcrc extends CI_Model
 	    $rs= $this->db->delete('drive_details');
 	   return $rs;
 	}
+
+    public function selfregister($x,$y)
+	{
+		$drive= "drive_".$x;
+		$data1 = [
+			'name'	=>$y
+			];
+			$rs= $this->db->insert($drive, $data1);	   
+	   return $rs;
+	}
+
+	public function checkdrive($x,$y)
+	{
+		$drive= "drive_".$x;
+		$this->db->select('*');
+		$this->db->where('name',$y);
+	    $rs= $this->db->get($drive);
+		if( $rs->num_rows())
+		return 1;
+		else
+		return 0;
+	}
+   
+	public function geteligiblestudent()
+	{		
+	    $this->db->select('*');		
+		$this->db->where('status',2);		
+		$rs= $this->db->get('personal_details');
+	   	   return $rs;
+	}
+
+
 }
 
 
