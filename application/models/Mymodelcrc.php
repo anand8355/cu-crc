@@ -251,6 +251,13 @@ class Mymodelcrc extends CI_Model
 	   	   return $rs;
 	}
 
+	public function getregisterstudent($x)
+	{		
+	    $drive= "drive_".$x;
+		$sql ="select * from personal_details inner join $drive on personal_details.user_id = $drive.name";
+		return $this->db->query($sql);
+	}
+
 
 }
 

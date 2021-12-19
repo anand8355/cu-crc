@@ -230,6 +230,13 @@ $this->load->dbforge();
 		$data['personal']= $this->mymodelcrc->geteligiblestudent();
 	 $this->load->view('eligible-student', $data);	
 	 }
+
+	 public function get_register_student($drive_id)
+	{
+		$data['personal']= $this->mymodelcrc->getregisterstudent($drive_id);
+		
+	 $this->load->view('register-student', $data);	
+	 }
 	
 	 
 

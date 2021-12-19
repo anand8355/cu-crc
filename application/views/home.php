@@ -1,9 +1,13 @@
 <?php include 'header.php';?>
+<script>
+$(function() {
+setTimeout(function() { $("#hideDiv").fadeOut(1500); }, 1000)
+})	
+</script>
 </head>
 
 <body>
 <?php include 'navbar.php';?>
-
 <div class="container-fluid">
     <div class="container">     
       <div class="row">
@@ -34,7 +38,7 @@
 		 <div class="row">
 	  <div class="col-md-12"><br>
 	  <h4> Recent Openings 
-		<span style="color:red;"><?php if(isset($_SESSION['session_msg'])){
+		<span id="hideDiv" style="color:red;"><?php if(isset($_SESSION['session_msg'])){
 		echo $_SESSION['session_msg']; unset($_SESSION['session_msg']);}?></span></h4>
 	  
 	  <?php 

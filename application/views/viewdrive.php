@@ -47,11 +47,21 @@
 	</tr>
 	<tr>
 	<td><b>Stream Required</b></td>
-	<td><?php echo $drive[0]['stream'];?></td>
+	<td><?php echo $drive[0]['st_req0'];?>,&nbsp;<?php echo $drive[0]['st_req1'];?>,&nbsp;<?php echo $drive[0]['st_req2'];?>,&nbsp;
+	<?php echo $drive[0]['st_req3'];?>,&nbsp;<?php echo $drive[0]['st_req4'];?>,&nbsp;<?php echo $drive[0]['st_req5'];?>,&nbsp;
+	<?php echo $drive[0]['st_req6'];?>,&nbsp;<?php echo $drive[0]['st_req7'];?>,<?php echo $drive[0]['st_req8'];?>,&nbsp;
+    <?php echo $drive[0]['st_req9'];?>,<?php echo $drive[0]['st_req10'];?></td>
 	</tr>
 	<tr>
 	<td><b>Eligibility Criteria</b></td>
-	<td><?php echo $drive[0]['cri'];?></td>
+	<td>10<sup>th</sup> %age >: <?php echo $drive[0]['tenage'];?><br>
+	12<sup>th</sup> %age >: <?php echo $drive[0]['twage'];?><br>
+	Dip %age >: <?php echo $drive[0]['dipage'];?><br>
+	UG %age >: <?php echo $drive[0]['ugage'];?><br>
+	PG %age >: <?php echo $drive[0]['pgage'];?><br>
+	Backlog ==: <?php echo $drive[0]['backlog'];?><br>
+	Male/Female : <?php echo $drive[0]['mode'];?><br>
+</td>
 	</tr>
 	<tr>
 	<td><b>Position</b></td>
@@ -94,7 +104,7 @@
 	<br>
 	
 	<h5> No of Students Registered: <br>
-	<a href="#" ><?php print_r($register); ?>&nbsp; </a>[<a href="#" ><i>Download</i></a>]</h5>
+	<a href="<?php  echo base_url();?>crc/get_register_student/<?php echo $drive[0]['drive_id'];?>" ><?php print_r($register); ?>&nbsp; </a>[<a href="#" ><i>Download</i></a>]</h5>
 	<br>
 	
 	<h5> No of Students Not Applied: <br>
