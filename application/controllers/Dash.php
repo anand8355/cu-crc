@@ -24,14 +24,24 @@ $this->load->library('form_validation');
 	
 	
 	
-	
-	
+//
+// 
 	
 	public function home()
 	{
 		
 			$data['drive']=$this->mymodelcrc->get_drive();
-			$this->load->view('home', $data);
+			$rw= $data['drive']->result_array();
+			$r =$data['drive']->num_rows();
+			$data['status_drive_student'] = array();
+			for($i=0; $i<$r; $i++)
+			{
+			$rs= $this->mymodelcrc->checkdrive($rw[$i][drive_id],$_SESSION['session_user_id']	);
+			
+            $data['status_drive_student'][$i] = $rs;
+			}
+            
+			$this->load->view('home', $data,$status_drive_student);
 		
 	}
 	
@@ -129,7 +139,17 @@ $this->load->library('form_validation');
 			{				
 			$this->session->set_userdata('session_user_name',$un);
 			$data['drive']=$this->mymodelcrc->get_drive();
-				$this->load->view('home', $data);
+			$rw= $data['drive']->result_array();
+			$r =$data['drive']->num_rows();
+			$data['status_drive_student'] = array();
+			for($i=0; $i<$r; $i++)
+			{
+			$rs= $this->mymodelcrc->checkdrive($rw[$i][drive_id],$_SESSION['session_user_id']	);
+			
+            $data['status_drive_student'][$i] = $rs;
+			}
+            
+			$this->load->view('home', $data,$status_drive_student);
 			}
 			else
 			{
@@ -567,14 +587,35 @@ $this->load->library('form_validation');
 		{
 			$this->session->set_userdata('session_msg',"Already Registered.....");
 			$data['drive']=$this->mymodelcrc->get_drive();
-				$this->load->view('home', $data);
+			$rw= $data['drive']->result_array();
+			$r =$data['drive']->num_rows();
+			$data['status_drive_student'] = array();
+			for($i=0; $i<$r; $i++)
+			{
+			$rs= $this->mymodelcrc->checkdrive($rw[$i][drive_id],$_SESSION['session_user_id']	);
+			
+            $data['status_drive_student'][$i] = $rs;
+			}
+            
+			$this->load->view('home', $data,$status_drive_student);
 		}
 		else
 		{
 			$rs= $this->mymodelcrc->selfregister($x,$y);
 			$data['drive']=$this->mymodelcrc->get_drive();
 			$this->session->set_userdata('session_msg',"Resistration Complete.....");
-				$this->load->view('home', $data);
+
+				$rw= $data['drive']->result_array();
+			$r =$data['drive']->num_rows();
+			$data['status_drive_student'] = array();
+			for($i=0; $i<$r; $i++)
+			{
+			$rs= $this->mymodelcrc->checkdrive($rw[$i][drive_id],$_SESSION['session_user_id']	);
+			
+            $data['status_drive_student'][$i] = $rs;
+			}
+            
+			$this->load->view('home', $data,$status_drive_student);
 		}
 		
 	}

@@ -109,7 +109,7 @@ $this->load->dbforge();
 			'st_req13'   => $st_req[13],
 			'st_req14'   => $st_req[14],
 			'st_req15'   => $st_req[15],
-			'drive_status' =>1
+			'drive_status' =>0
 		];
 		
 		
@@ -206,6 +206,16 @@ $this->load->dbforge();
 		$data['register']= $this->mymodelcrc->get_register($x); 
 
 		$this->load->view('viewdrive',$data);
+	}
+
+	public function viewdriveinstitute($x)
+	{
+		
+		$data['drive']= $this->mymodelcrc->get_details_drive($x); 
+		$data['eligible']= $this->mymodelcrc->get_eligible($x); 
+		$data['register']= $this->mymodelcrc->get_register($x); 
+
+		$this->load->view('viewdrive-institute',$data);
 	}
 	
 	public function get_student_profile($user_id)

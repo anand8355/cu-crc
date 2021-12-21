@@ -18,6 +18,7 @@
     <div class="col-md-9 col-sm-9 text-center" style="background-color:#192B4D;height:60px;padding-top:10px;color:white">
          <h2> CU - CRC Portal 
          </h2>
+		
 	</div>
     
  </div>
@@ -26,14 +27,8 @@
 
 <div class="container" style="margin-top:1px;">
    <h5> <b>Welcome,</b>&nbsp;&nbsp;<?php echo $_SESSION['session_user_name'];?>&nbsp; [<span style="font-size:17px;"><i><a href="#">Change Password</a></i></span>][<span style="font-size:17px;"><i><a href="<?php echo base_url();?>welcome/index">Logout</a></i></span>]</h5> 
-	
-	<div class="row">
-	<div class="col-md-11" style="margin-top:30px;">
-	
-	
-	
-	<hr style="border: 6px solid green;">
-	<?php 
+   <hr style="color:black;">
+   <?php 
 	$r = $drive->num_rows();
 	$rw= $drive->result_array();
 	$i=0;
@@ -44,11 +39,44 @@
 	
 	
 	?>
+
+<div class="row">
+	<div class="col-md-11" style="margin-top:30px;">
+	
+    <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Total No. of Students with CRC Portal</h5>
+      
+        <a href="#" class="btn btn-primary"><?php echo "8"; ?></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Students Completed Their Profile</h5>
+      
+        <a href="#" class="btn btn-primary"><?php echo "1"; ?></a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+	<div class="row">
+	<div class="col-md-11" style="margin-top:30px;">
+	
+	<hr style="border: 2px solid green;">
+	
 	<h5> Recents Drives</h5>
 	<?php while($i<$r){ ?>
 	<div class="card" style="margin-top:20px;">
      <div class="card-header"><b><?php  echo $rw[$i]['name'];?></b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Dated: <?php  echo $rw[$i]['drive_posted'];?></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <a href="<?php  echo base_url();?>crc/viewdrive/<?php  echo $rw[$i]['drive_id'];?>" class="btn btn-success">View Detail</a></div>
+	 <a href="<?php  echo base_url();?>crc/viewdriveinstitute/<?php  echo $rw[$i]['drive_id'];?>" class="btn btn-success">View Detail</a></div>
 	 </div>
 	 <?php $i= $i+1; }?>
 	 
@@ -60,7 +88,7 @@
 	<div class="row">
 	
 	<div class="col-md-11" style="margin-top:30px;">
-	<hr style="border: 6px solid green;">
+	<hr style="border: 2px solid green;">
 	<h5> Student's Request for Profile Update Approval</h5>
 	<hr>
 	<table class="table table-striped table-bordered"  id="myTable">

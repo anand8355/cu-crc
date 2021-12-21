@@ -1,23 +1,39 @@
-<?php include 'header.php';?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CU-CRC-Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
 </head>
-
 <body>
-<?php include 'navbar.php';?>
+<div class="row" style="margin-top:5px;">
+    <div class="col-md-3 text-center" > 
+         <a href="<?php echo base_url();?>dash/home_institute/"><img src="<?php echo base_url();?>assets/img/homepage-logo-6.png" height="70px" ></img></a>
+	</div>
+    <div class="col-md-9 col-sm-9 text-center" style="background-color:#192B4D;height:60px;padding-top:10px;color:white">
+         <h2> CU - CRC Portal 
+         </h2>
+	</div>
+    
+ </div>
 
 <div class="container" style="margin-top:1px;">
-
+<?php include 'nav1.php';?>
 
     <div class="row" style="margin-top:50px;">
 	
 	<div class="col-md-12 text-center text-primary">
-	
+	<h5> Drive Information </h5>
 	</div>
 	</div>
 	 <div class="row" style="margin-top:5px;">
 	 
 	<div class="col-md-9">
-	<h5> Drive Information <a href="<?php  echo base_url();?>dash/home" class="btn btn-success"> Back to Recents Drives List</a></h5>
-	<br>
 	<table class="table table-striped table-bordered" style="width:100%" id="myTable">
 	<tr>
 	<td><b>Name of the Company</b></td>
@@ -104,7 +120,7 @@
 	
 	
 	</div>
-	
+
 	
 	
         

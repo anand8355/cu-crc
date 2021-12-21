@@ -46,12 +46,14 @@ setTimeout(function() { $("#hideDiv").fadeOut(1500); }, 1000)
 	$rw= $drive->result_array();
 	$i=0;
 	
+	//print_r($status_drive_student[0]);
+	
 	
 	?>
 	<?php while($i<$r){ ?>
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title text-success"><?php  echo $rw[$i]['name'];?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php  echo base_url();?>dash/self_register/<?php  echo $rw[$i]['drive_id'];?>/<?php echo $_SESSION['session_user_id']; ?>" class="btn btn-secondary">Register Your Self</a><a href="<?php  echo base_url();?>dash/student_viewdrive/<?php  echo $rw[$i]['drive_id'];?>" class="btn btn-success"> View Details</a></h5>
+        <h5 class="card-title text-success"><?php  echo $rw[$i]['name'];?> <span style="color:red;font-size:14px;font-style: italic;"><?php if($status_drive_student[0]==1) { echo "Registerd.." ;} else {echo "Not Registerd.." ;} ?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php  echo base_url();?>dash/self_register/<?php  echo $rw[$i]['drive_id'];?>/<?php echo $_SESSION['session_user_id']; ?>" class="btn btn-secondary">Register Your Self</a><a href="<?php  echo base_url();?>dash/student_viewdrive/<?php  echo $rw[$i]['drive_id'];?>" class="btn btn-success"> View Details</a></h5>
       </div>
     </div>
 	 <?php $i= $i+1; }?>
