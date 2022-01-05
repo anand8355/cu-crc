@@ -37,7 +37,7 @@
 	
 	<hr style="border: 6px solid green;">
 	
-	<h5> Recents Drives</h5>
+	<h5> Recents Drives: </h5>
 	
 	<table class="table table-striped table-bordered"  id="myTable">
 	<tr><td><b>Name</b></td><td><?php echo $personal[0]['user_name']; ?></td></tr>
