@@ -247,6 +247,13 @@ $this->load->dbforge();
 		
 	 $this->load->view('register-student', $data);	
 	 }
+
+
+	 public function download_register_student($drive_id)
+	{
+		$data['drive_id'] = $drive_id;
+	 $this->load->view('registerstudent_download', $data);	
+	 }
 	
 	 
 
