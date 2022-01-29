@@ -30,7 +30,7 @@
 	<td><?php echo $drive[0]['batch'];?></td>
 	</tr>
 	<tr>
-	<td><b>Total Days for dirve</b></td>
+	<td><b>Total Days for Drive</b></td>
 	<td><?php echo $drive[0]['total_date'];?></td>
 	</tr>
 	<tr>
@@ -100,7 +100,7 @@
 	</div>
 	<div class="col-md-3">
 	<h5> No of Eligible Students: <br>
-	<a href="<?php  echo base_url();?>crc/get_eligible_student/<?php echo $drive[0]['drive_id'];?>" ><?php print_r($eligible); ?>&nbsp; </a>[<a href="<?php  echo base_url();?>crc/download_register_student/<?php echo $drive[0]['drive_id'];?>" ><i>Download</i></a>]</h5>
+	<a href="<?php  echo base_url();?>crc/get_eligible_student/<?php echo $drive[0]['drive_id'];?>" ><?php print_r($eligible); ?>&nbsp; </a>[<a href="<?php  echo base_url();?>crc/download_eligible_student/<?php echo $drive[0]['drive_id'];?>" ><i>Download</i></a>]</h5>
 	<br>
 	
 	<h5> No of Students Registered: <br>

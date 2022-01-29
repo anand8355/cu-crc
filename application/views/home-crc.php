@@ -136,14 +136,14 @@ $(document).ready(function(){
     </div>
 	
 	<div class="row">
-	<div class="col-md-10" style="margin-top:30px;">
+	    <div class="col-md-8" style="margin-top:30px;">
 	
-	<hr>
-	
-	<?php 
-	$r = $drive->num_rows();
-	$rw= $drive->result_array();
-	$i=0;
+        <hr>
+        
+        <?php 
+        $r = $drive->num_rows();
+        $rw= $drive->result_array();
+        $i=0;
 	
 	
 	?>
@@ -157,7 +157,16 @@ $(document).ready(function(){
 	 
 	
 	
-	</div>
+	    </div>
+
+        <div class="col-md-4" style="margin-top:30px;">
+        <hr>
+        <h6> <i>Notices /Updates</i> (<a href="#">new</a>) </h6>
+        <ol>
+  <li><i>Placement Drive of Infosys will be on 12th Feb 2022.(<a href="#">edit</a>)(<a href="#">delete</a>)</i></li>
+  </ol>
+        </div>
+
 	</div>
 
 </div>

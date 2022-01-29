@@ -17,7 +17,7 @@ $sq = "select * from personal_details inner join $drive on personal_details.user
 $rs = $con->query($sq);
 
 
-$sq1="select * from drive_details where driver_id = $drive_id";
+$sq1="select * from drive_details where drive_id = $drive_id";
 $rs1= $con->query($sq1);
 
 $rw1=$rs1->fetch_assoc();
@@ -60,7 +60,7 @@ header("Content-Disposition:attachment;filename= studentdata.xls");
 $i=1;
 while($rw=$rs->fetch_assoc())
 {	
-  if($rw1['tenage'] <= $rw['tenth_per'] && )
+  if($rw1['tenage'] <= $rw['tenth_per'] && $rw1['twage'] <= $rw['twelve_per'] && $rw1['dipage'] <= $rw['dip_per'] && $rw1['ugage'] <= $rw['grad_per'] && $rw1['pgage'] <= $rw['pg_per'] && $rw1['backlog'] >= $rw['pg_per'])
   {
 ?>
     <tr>

@@ -254,6 +254,12 @@ $this->load->dbforge();
 		$data['drive_id'] = $drive_id;
 	 $this->load->view('registerstudent_download', $data);	
 	 }
+
+	 public function download_eligible_student($drive_id)
+	{
+		$data['drive_id'] = $drive_id;
+	 $this->load->view('eligible_download', $data);	
+	 }
 	
 	 
 

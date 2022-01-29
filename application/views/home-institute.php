@@ -41,22 +41,33 @@
 	?>
 
 <div class="row">
-	<div class="col-md-11" style="margin-top:30px;">
+	<div class="col-md-12" style="margin-top:30px;">
 	
     <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-4">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Total No. of Students with CRC Portal</h5>
+        <h6 class="card-title">Total No. of Students with CRC Portal</h6>
       
         <a href="#" class="btn btn-primary"><?php echo "8"; ?></a>
       </div>
     </div>
   </div>
-  <div class="col-sm-6">
+  <div class="col-sm-4">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Students Completed Their Profile</h5>
+        <h6 class="card-title">Students Placed</h6>
+      
+        <a href="#" class="btn btn-primary"><?php echo "1"; ?></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Students Completed Their Profile</h6>
       
         <a href="#" class="btn btn-primary"><?php echo "1"; ?></a>
       </div>
@@ -68,7 +79,7 @@
 
 
 	<div class="row">
-	<div class="col-md-11" style="margin-top:30px;">
+	<div class="col-md-8" style="margin-top:30px;">
 	
 	<hr style="border: 2px solid green;">
 	
@@ -83,11 +94,19 @@
 	
 	
 	</div>
+  <div class="col-md-4" style="margin-top:30px;">
+  <hr style="border: 2px solid red;">
+  <h5> <i>Notices/Updates</i></h5>
+  <ol>
+  <li><i>Placement Drive of Infosys will be on 12th Feb 2022.</i></li>
+  </ol>
+  </div>
+
 	</div>
 	
 	<div class="row">
 	
-	<div class="col-md-11" style="margin-top:30px;">
+	<div class="col-md-12" style="margin-top:30px;">
 	<hr style="border: 2px solid green;">
 	<h5> Student's Request for Profile Update Approval</h5>
 	<hr>
