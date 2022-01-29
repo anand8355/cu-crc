@@ -17,6 +17,11 @@ $sq = "select * from personal_details inner join $drive on personal_details.user
 $rs = $con->query($sq);
 
 
+$sq1="select * from drive_details where driver_id = $drive_id";
+$rs1= $con->query($sq1);
+
+$rw1=$rs1->fetch_assoc();
+
 header('Content-Type:application/xls');
 header("Content-Disposition:attachment;filename= studentdata.xls");
 
@@ -55,7 +60,8 @@ header("Content-Disposition:attachment;filename= studentdata.xls");
 $i=1;
 while($rw=$rs->fetch_assoc())
 {	
-  
+  if($rw1['tenage'] <= $rw['tenth_per'] && )
+  {
 ?>
     <tr>
         <td><?php echo $i; ?></td>
@@ -78,5 +84,6 @@ while($rw=$rs->fetch_assoc())
         <td>Registered</td>
        
     </tr>
-<?php  $i++;} ?>
-7
+<?php  $i++;
+} 
+}?>
